@@ -8,8 +8,7 @@ err_msg() {
 	echo "slurp - to select area to capture"
 	echo "zbarimg - to convert QR to outauth"
 	echo "pass otp - to store OTP in storage"
-	echo
-	echo "if you see this message, you don't have some of above installed"
+	echo "pass and pass otp - to store OTP in storage."
 	exit 1
 }
 
