@@ -24,7 +24,7 @@ to_zbarimg()
 	fi
 }
 
-capture()
+use_capture()
 {
 	if [ -z "$(which grim 2>/dev/null)" ] || [ -z "$(which slurp 2>/dev/null)" ]
 	then
@@ -35,7 +35,7 @@ capture()
 	fi
 }
 
-dragon()
+use_dragon()
 {
 	if [ -z "$(which dragon-drop 2>/dev/null)" ]
 	then
@@ -45,3 +45,11 @@ dragon()
 		dragon-drop --target --and-exit | to_zbarimg
 	fi
 }
+
+if [ "$1" = "--dragon" ]
+then
+	use_dragon
+elif [ "$1" = "--capture" ] || [ -z "$1" ]
+then
+	use_capture
+fi
