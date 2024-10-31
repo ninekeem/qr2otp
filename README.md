@@ -8,6 +8,8 @@ Small script to convert QR to pass otp compatible string
 or
 <br>
 `QR2OTP.sh --capture | pass otp insert path/to/your/otp`
+<br>
+`--capture` is optional and default mode
 
 ### dragon
 `QR2OTP.sh --dragon | wl-copy`
